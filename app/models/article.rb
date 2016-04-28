@@ -3,7 +3,7 @@ class Article < ActiveRecord::Base
   belongs_to :category
 
   # Validations
-  validate_presence_of :title, :context
+  validates_presence_of :title, :context
 
   # Scopes
   scope :alphabetical, -> { order("title") }
